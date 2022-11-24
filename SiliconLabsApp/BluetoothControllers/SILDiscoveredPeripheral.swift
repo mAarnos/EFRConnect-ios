@@ -39,7 +39,7 @@ class SILDiscoveredPeripheral: NSObject {
     
     private var lastTimestamp = 0.0
     private var packetReceivedCount: Int64 = 0
-    
+    /*
     var isDMPConnectedLightConnect: Bool {
         return isContainService(SILServiceNumberConnectedLightingConnect)
     }
@@ -58,7 +58,7 @@ class SILDiscoveredPeripheral: NSObject {
     
     var isRangeTest: Bool {
         return isContainService(SILServiceNumberRangeTest)
-    }
+    }*/
     
     var hasEddystoneService: Bool {
         return isContainService(EddystoneService)

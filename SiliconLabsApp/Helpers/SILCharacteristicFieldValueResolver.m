@@ -8,7 +8,7 @@
 
 #import "SILCharacteristicFieldValueResolver.h"
 #import "SILBluetoothFieldModel.h"
-#import <Crashlytics/Crashlytics.h>
+//#import <Crashlytics/Crashlytics.h>
 #import "SILCharacteristicFieldValueResolverContext.h"
 
 NSString * const ERROR_KIND_PARSE = @"Parse";
@@ -113,19 +113,19 @@ NSString * const FieldReadErrorMessage = @"Field value not present or unreadable
 #pragma mark - Read
 
 - (NSString *)readValueString:(NSData *)value withFieldModel:(SILBluetoothFieldModel *)fieldModel {
-    [CrashlyticsKit setObjectValue:value forKey:@"field_value"];
+    //[CrashlyticsKit setObjectValue:value forKey:@"field_value"];
     if (value.length == 0) {
         return FieldReadErrorMessage;
     }
-    
+    /*
     CharacteristicFieldConverter *test = [CharacteristicFieldConverter.alloc init];
     
     BOOL ok = [test supportsWithFieldModel:fieldModel];
     if (ok) {
         return [test convertToStringWithFieldModel:fieldModel value:value];
-    } else {
+    } else {*/
         return [self utf8StringForValue:value decimalExponent:0];
-    }
+    //}
 }
 
 - (NSNumber *)applyDecimalExponent:(NSInteger)decimalExponent toNumber:(NSNumber *)number {
@@ -137,15 +137,15 @@ NSString * const FieldReadErrorMessage = @"Field value not present or unreadable
 #pragma mark - Write
 
 - (NSData *)dataForValueString:(NSString *)string withFieldModel:(SILBluetoothFieldModel *)fieldModel error:(NSError *__autoreleasing *)error {
-    
+    /*
     CharacteristicFieldConverter *test = [CharacteristicFieldConverter.alloc init];
     
     BOOL ok = [test supportsWithFieldModel:fieldModel];
     if (ok) {
         return [test convertToDataWithFieldModel:fieldModel value:string];
-    } else {
+    } else { */
         return [self dataForAsciiString:string];
-    }
+   // }
 }
 
 #pragma mark - Binary Helpers

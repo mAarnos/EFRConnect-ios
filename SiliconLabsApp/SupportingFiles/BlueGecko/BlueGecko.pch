@@ -9,6 +9,8 @@
 #ifndef BlueGecko_pch
 #define BlueGecko_pch
 
-#import "BlueGecko-Swift.h"
+//#import "BlueGecko-Swift.h"
+#import "NSString+SILBrowserNotifications.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
 #endif /* BlueGecko_pch */

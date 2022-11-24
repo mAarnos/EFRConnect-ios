@@ -837,6 +837,28 @@
 		2F0DE91D258B7F4D00BEFF76 /* SILContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DE91C258B7F4D00BEFF76 /* SILContextMenu.swift */; };
 		2FD579D7257933DD001D7E9E /* NSObject+SILAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD579D6257933DD001D7E9E /* NSObject+SILAssociatedObject.m */; };
 		2FD579DD2579352C001D7E9E /* UIViewController+SILContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD579DC2579352C001D7E9E /* UIViewController+SILContext.swift */; };
+		330E5F16292EA95D00FC401D /* EFRSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 330E5F15292EA95D00FC401D /* EFRSDK.m */; };
+		330E5F17292EA95D00FC401D /* EFRSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 330E5F14292EA95D00FC401D /* EFRSDK.h */; };
+		330E5F1B292EA9C600FC401D /* CBPeripheral+Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924BA6A1E7057F800AE9E56 /* CBPeripheral+Services.m */; };
+		330E5F1C292EA9CB00FC401D /* CBService+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924BA6D1E70585100AE9E56 /* CBService+Categories.m */; };
+		330E5F1D292EA9D300FC401D /* NSError+SILHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CCCFF51A7304210004B2F4 /* NSError+SILHelpers.m */; };
+		330E5F1F292EA9E900FC401D /* SILBluetoothSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E62B4E1ECCA29400344CAA /* SILBluetoothSearch.m */; };
+		330E5F20292EA9F400FC401D /* SILConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A37E461A82C1C400510E39 /* SILConstants.m */; };
+		330E5F22292EAB0B00FC401D /* SILUUIDProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4924BA731E719C9900AE9E56 /* SILUUIDProvider.m */; };
+		330E5F23292EAB3D00FC401D /* SILOTAFirmwareUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C10EEE1E71E0EC00C67256 /* SILOTAFirmwareUpdateManager.m */; };
+		330E5F24292EAB5800FC401D /* SILOTAFirmwareFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F93C91E7719D40057C1E0 /* SILOTAFirmwareFile.m */; };
+		330E5F25292EABA600FC401D /* SILCharacteristicTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8A8861BC47790001948C1 /* SILCharacteristicTableModel.m */; };
+		330E5F27292EABEB00FC401D /* SILBluetoothFieldModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BBA7641BD68AB300C2B07E /* SILBluetoothFieldModel.m */; };
+		330E5F28292EAC7900FC401D /* SILBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CCCFE91A73040C0004B2F4 /* SILBeacon.m */; };
+		330E5F2A292EAE6F00FC401D /* SILRSSIMeasurementTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80280F0A27D8BC24008D6F60 /* SILRSSIMeasurementTable.swift */; };
+		330E5F2C292EAF9600FC401D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E5F2B292EAF9600FC401D /* CoreLocation.framework */; };
+		330E5F2E292EAF9F00FC401D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E5F2D292EAF9E00FC401D /* CoreBluetooth.framework */; };
+		330E5F2F292EB15E00FC401D /* NSString+SILBrowserNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E56E9E42416800B00D5B92A /* NSString+SILBrowserNotifications.m */; };
+		330E5F30292F315B00FC401D /* SILConnectedPeripheralDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E967BAE24041F3E00D89B48 /* SILConnectedPeripheralDataModel.m */; };
+		330E5F31292F316E00FC401D /* SILCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A37E401A82809B00510E39 /* SILCentralManager.m */; };
+		330E5F36292F6EEE00FC401D /* SILWeakTargetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E642661F1A855DA8006C6B2F /* SILWeakTargetWrapper.m */; };
+		330E5F37292F6EFF00FC401D /* SILWeakNotificationPair.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C667231B0A5BD90083C248 /* SILWeakNotificationPair.m */; };
+		330E5F39292F6F1700FC401D /* SILCharacteristicFieldValueResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702AB2B1BDFEE35009527B0 /* SILCharacteristicFieldValueResolver.m */; };
 		491ADCBB1E71EEA300AC2E69 /* SILOTAUICoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 491ADCBA1E71EEA300AC2E69 /* SILOTAUICoordinator.m */; };
 		491ADCBF1E72E58300AC2E69 /* SILOTASetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491ADCBD1E72E58300AC2E69 /* SILOTASetupViewController.m */; };
 		491ADCC01E72E58300AC2E69 /* SILOTASetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491ADCBE1E72E58300AC2E69 /* SILOTASetupViewController.xib */; };
@@ -1087,6 +1109,19 @@
 			remoteInfo = BlueGecko;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		330E5F10292EA95C00FC401D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				330E5F17292EA95D00FC401D /* EFRSDK.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0461B3652719DD900076D627 /* EnvironmentDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemoViewController.swift; sourceTree = "<group>"; };
@@ -1723,6 +1758,11 @@
 		2FD579D5257933DD001D7E9E /* NSObject+SILAssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SILAssociatedObject.h"; sourceTree = "<group>"; };
 		2FD579D6257933DD001D7E9E /* NSObject+SILAssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SILAssociatedObject.m"; sourceTree = "<group>"; };
 		2FD579DC2579352C001D7E9E /* UIViewController+SILContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SILContext.swift"; sourceTree = "<group>"; };
+		330E5F12292EA95C00FC401D /* libEFRSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEFRSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		330E5F14292EA95D00FC401D /* EFRSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFRSDK.h; sourceTree = "<group>"; };
+		330E5F15292EA95D00FC401D /* EFRSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFRSDK.m; sourceTree = "<group>"; };
+		330E5F2B292EAF9600FC401D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		330E5F2D292EAF9E00FC401D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		40F66980CDB9137B6A8DE02E /* Pods-Wireless Gecko.debug-wireless-gecko.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wireless Gecko.debug-wireless-gecko.xcconfig"; path = "Pods/Target Support Files/Pods-Wireless Gecko/Pods-Wireless Gecko.debug-wireless-gecko.xcconfig"; sourceTree = "<group>"; };
 		419B3BA27A2361DA1016CF35 /* Pods-SiliconLabsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiliconLabsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SiliconLabsAppTests/Pods-SiliconLabsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		426AC50AF4550762BDD32A6E /* Pods_SiliconLabsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiliconLabsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2076,6 +2116,15 @@
 				0F4E518C21525FDC00F58ACE /* CoreLocation.framework in Frameworks */,
 				0F4E518D21525FDC00F58ACE /* QuartzCore.framework in Frameworks */,
 				2B257CB817ADC2635883B007 /* Pods_WirelessGecko.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		330E5F0F292EA95C00FC401D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330E5F2E292EAF9F00FC401D /* CoreBluetooth.framework in Frameworks */,
+				330E5F2C292EAF9600FC401D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3941,6 +3990,15 @@
 			path = "React-Sense";
 			sourceTree = "<group>";
 		};
+		330E5F13292EA95D00FC401D /* EFRSDK */ = {
+			isa = PBXGroup;
+			children = (
+				330E5F14292EA95D00FC401D /* EFRSDK.h */,
+				330E5F15292EA95D00FC401D /* EFRSDK.m */,
+			);
+			path = EFRSDK;
+			sourceTree = "<group>";
+		};
 		4C2C6336240923C70080CE76 /* Browser */ = {
 			isa = PBXGroup;
 			children = (
@@ -4383,6 +4441,8 @@
 		E621B3451A65589E00223C5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				330E5F2D292EAF9E00FC401D /* CoreBluetooth.framework */,
+				330E5F2B292EAF9600FC401D /* CoreLocation.framework */,
 				DCACBA3C1EA7A047001039B5 /* HomeKit.framework */,
 				E666CBE61A77298900676C5C /* QuartzCore.framework */,
 				E6D45D351A6EA74C002D9EC4 /* CoreLocation.framework */,
@@ -4617,6 +4677,7 @@
 			children = (
 				E6CAA2221A64011900A49DAF /* SiliconLabsApp */,
 				8008B8EE25E67D7A00439F3A /* BlueGeckoTests */,
+				330E5F13292EA95D00FC401D /* EFRSDK */,
 				E621B3451A65589E00223C5A /* Frameworks */,
 				E6CAA2211A64011900A49DAF /* Products */,
 				11CC9F6FE96DECE887FB6DF6 /* Pods */,
@@ -4633,6 +4694,7 @@
 				0C2FCBDA1F9A542300F4F259 /* BlueGecko.app */,
 				0F4E51CC21525FDC00F58ACE /* WirelessGecko.app */,
 				8008B8ED25E67D7A00439F3A /* BlueGeckoTests.xctest */,
+				330E5F12292EA95C00FC401D /* libEFRSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4754,6 +4816,23 @@
 			productReference = 0F4E51CC21525FDC00F58ACE /* WirelessGecko.app */;
 			productType = "com.apple.product-type.application";
 		};
+		330E5F11292EA95C00FC401D /* EFRSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 330E5F1A292EA95D00FC401D /* Build configuration list for PBXNativeTarget "EFRSDK" */;
+			buildPhases = (
+				330E5F0E292EA95C00FC401D /* Sources */,
+				330E5F0F292EA95C00FC401D /* Frameworks */,
+				330E5F10292EA95C00FC401D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EFRSDK;
+			productName = EFRSDK;
+			productReference = 330E5F12292EA95C00FC401D /* libEFRSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8008B8EC25E67D7A00439F3A /* BlueGeckoTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8008B8F625E67D7A00439F3A /* Build configuration list for PBXNativeTarget "BlueGeckoTests" */;
@@ -4819,6 +4898,9 @@
 						DevelopmentTeam = 52444FG85C;
 						ProvisioningStyle = Automatic;
 					};
+					330E5F11292EA95C00FC401D = {
+						CreatedOnToolsVersion = 14.0;
+					};
 					8008B8EC25E67D7A00439F3A = {
 						CreatedOnToolsVersion = 12.0;
 						DevelopmentTeam = 52444FG85C;
@@ -4869,6 +4951,7 @@
 				E6CAA21F1A64011900A49DAF /* BlueGeckoWithHomeKit */,
 				0F4E50F321525FDC00F58ACE /* WirelessGecko */,
 				8008B8EC25E67D7A00439F3A /* BlueGeckoTests */,
+				330E5F11292EA95C00FC401D /* EFRSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -6161,6 +6244,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		330E5F0E292EA95C00FC401D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330E5F22292EAB0B00FC401D /* SILUUIDProvider.m in Sources */,
+				330E5F30292F315B00FC401D /* SILConnectedPeripheralDataModel.m in Sources */,
+				330E5F36292F6EEE00FC401D /* SILWeakTargetWrapper.m in Sources */,
+				330E5F27292EABEB00FC401D /* SILBluetoothFieldModel.m in Sources */,
+				330E5F1D292EA9D300FC401D /* NSError+SILHelpers.m in Sources */,
+				330E5F20292EA9F400FC401D /* SILConstants.m in Sources */,
+				330E5F1B292EA9C600FC401D /* CBPeripheral+Services.m in Sources */,
+				330E5F1C292EA9CB00FC401D /* CBService+Categories.m in Sources */,
+				330E5F28292EAC7900FC401D /* SILBeacon.m in Sources */,
+				330E5F2A292EAE6F00FC401D /* SILRSSIMeasurementTable.swift in Sources */,
+				330E5F1F292EA9E900FC401D /* SILBluetoothSearch.m in Sources */,
+				330E5F31292F316E00FC401D /* SILCentralManager.m in Sources */,
+				330E5F39292F6F1700FC401D /* SILCharacteristicFieldValueResolver.m in Sources */,
+				330E5F23292EAB3D00FC401D /* SILOTAFirmwareUpdateManager.m in Sources */,
+				330E5F16292EA95D00FC401D /* EFRSDK.m in Sources */,
+				330E5F25292EABA600FC401D /* SILCharacteristicTableModel.m in Sources */,
+				330E5F2F292EB15E00FC401D /* NSString+SILBrowserNotifications.m in Sources */,
+				330E5F24292EAB5800FC401D /* SILOTAFirmwareFile.m in Sources */,
+				330E5F37292F6EFF00FC401D /* SILWeakNotificationPair.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8008B8E925E67D7A00439F3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -6534,6 +6643,56 @@
 			};
 			name = Release;
 		};
+		330E5F18292EA95D00FC401D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UR999LKQLA;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		330E5F19292EA95D00FC401D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UR999LKQLA;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8008B8F425E67D7A00439F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB5080BED4F34A4E007FA450 /* Pods-BlueGeckoTests.debug.xcconfig */;
@@ -6809,6 +6968,15 @@
 			buildConfigurations = (
 				0F4E51C821525FDC00F58ACE /* Debug */,
 				0F4E51CA21525FDC00F58ACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		330E5F1A292EA95D00FC401D /* Build configuration list for PBXNativeTarget "EFRSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				330E5F18292EA95D00FC401D /* Debug */,
+				330E5F19292EA95D00FC401D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

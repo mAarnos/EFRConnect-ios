@@ -8,18 +8,18 @@
 
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "SILCharacteristicTableModel.h"
-#import "SILBluetoothFieldModel.h"
-#import "SILCharacteristicFieldBuilder.h"
-#import "SILBluetoothModelManager.h"
+//#import "SILBluetoothFieldModel.h"
+//#import "SILCharacteristicFieldBuilder.h"
+//#import "SILBluetoothModelManager.h"
 #import "SILUUIDProvider.h"
-#import "SILLogDataModel.h"
+//#import "SILLogDataModel.h"
 #import "BlueGecko.pch"
-#import "SILEncodingPseudoFieldRowModel.h"
+//#import "SILEncodingPseudoFieldRowModel.h"
 
-#import <Crashlytics/Crashlytics.h>
+//#import <Crashlytics/Crashlytics.h>
 
 @interface SILCharacteristicTableModel()
-@property (strong, nonatomic) SILCharacteristicFieldBuilder *fieldBuilder;
+//@property (strong, nonatomic) SILCharacteristicFieldBuilder *fieldBuilder;
 @property (strong, nonatomic) NSMutableArray *requirementsMet;
 @property (strong, nonatomic) NSData *lastReadValue;
 @property (strong, nonatomic) NSData *writeValue;
@@ -34,17 +34,17 @@
 
 @implementation SILCharacteristicTableModel
 
-@synthesize isExpanded;
-@synthesize hideTopSeparator;
+//@synthesize isExpanded;
+//@synthesize hideTopSeparator;
 @synthesize isMappable;
 
 - (instancetype)initWithCharacteristic:(CBCharacteristic *)characteristic {
     self = [super init];
     if (self) {
         self.characteristic = characteristic;
-        self.bluetoothModel = [[SILBluetoothModelManager sharedManager] characteristicModelForUUIDString:[self uuidString]];
-        self.fieldBuilder = [[SILCharacteristicFieldBuilder alloc] init];
-        self.fieldTableRowModels = [self.fieldBuilder characteristicModelValueAsFieldRows:self.bluetoothModel withRequirements:nil];
+        //self.bluetoothModel = [[SILBluetoothModelManager sharedManager] characteristicModelForUUIDString:[self uuidString]];
+        //self.fieldBuilder = [[SILCharacteristicFieldBuilder alloc] init];
+        //self.fieldTableRowModels = [self.fieldBuilder characteristicModelValueAsFieldRows:self.bluetoothModel withRequirements:nil];
         self.requirementsMet = [[NSMutableArray alloc] initWithArray:@[@"Mandatory"]];
         self.descriptorModels = @[];
         self.writeWithResponse = self.characteristic.properties & CBCharacteristicPropertyWrite;
@@ -56,9 +56,9 @@
 }
 
 - (NSString *)name {
-    if (_bluetoothModel.name) {
-        return _bluetoothModel.name;
-    }
+    //if (_bluetoothModel.name) {
+    //    return _bluetoothModel.name;
+    //}
     
     NSString* predefinedName = [[SILUUIDProvider sharedProvider] predefinedNameForCharacteristicUUID:[self uuidString]];
     
@@ -67,7 +67,7 @@
 
 - (NSString *)mappedName {
     [self setIsMappable:YES];
-    NSString * const mappedName = [SILCharacteristicMap getWith:self.uuidString].name;
+    NSString * const mappedName = nil; //[SILCharacteristicMap getWith:self.uuidString].name;
     return mappedName ?: [self setMappable];
 }
 
@@ -76,7 +76,7 @@
 }
 
 - (BOOL)isUnknown {
-    return self.bluetoothModel == nil && self.fieldTableRowModels.count == 0;
+    return false; //self.bluetoothModel == nil && self.fieldTableRowModels.count == 0;
 }
 
 #pragma mark - SILGenericAttributeTableModel
@@ -86,15 +86,15 @@
 }
 
 - (void)toggleExpansionIfAllowed {
-    self.isExpanded = !self.isExpanded;
+    //self.isExpanded = !self.isExpanded;
 }
 
 - (void)expandFieldIfNeeded {
-    self.isExpanded = YES;
+    //self.isExpanded = YES;
 }
 
 - (NSString *)hexUuidString {
-    return [self.characteristic getHexUuidValue];
+    return self.characteristic.UUID.UUIDString;
 }
 
 - (NSString*)uuidString {
@@ -117,7 +117,7 @@
     }
 }
 
-- (void)updateWithField:(id<SILCharacteristicFieldRow>)fieldModel {
+/*- (void)updateWithField:(id<SILCharacteristicFieldRow>)fieldModel {
     NSMutableArray *fields = [[NSMutableArray alloc] initWithArray:self.fieldTableRowModels];
     for (NSInteger fieldIndex = 0; fieldIndex < self.fieldTableRowModels.count; fieldIndex++) {
         SILBluetoothFieldModel *bluetoothField = self.fieldTableRowModels[fieldIndex];
@@ -125,27 +125,27 @@
             fields[fieldIndex] = fieldModel;
         }
     }
-}
+}*/
 
 - (void)updateRead:(CBCharacteristic *)characteristic {
     if (characteristic.value) {
         self.lastReadValue = characteristic.value;
         NSInteger readIndex = 0;
         
-        [CrashlyticsKit setObjectValue:self.bluetoothModel.name forKey:@"characteristic_name"];
-        [CrashlyticsKit setObjectValue:characteristic.value forKey:@"characteristic_value"];
-        for (NSObject<SILCharacteristicFieldRow> *fieldRowModel in self.fieldTableRowModels) {
+        //[CrashlyticsKit setObjectValue:self.bluetoothModel.name forKey:@"characteristic_name"];
+        //[CrashlyticsKit setObjectValue:characteristic.value forKey:@"characteristic_value"];
+        /*for (NSObject<SILCharacteristicFieldRow> *fieldRowModel in self.fieldTableRowModels) {
             NSArray *fieldRequirements = fieldRowModel.fieldModel.requirements;
             fieldRowModel.delegate = self;
             if (!fieldRequirements || [self isFieldMetRequirement:fieldRowModel]) {
                 fieldRowModel.requirementsSatisfied = YES;
-                [CrashlyticsKit setObjectValue:@(readIndex) forKey:@"read_index"];
+                //[CrashlyticsKit setObjectValue:@(readIndex) forKey:@"read_index"];
                 NSInteger readLength = [fieldRowModel consumeValue:self.lastReadValue fromIndex:readIndex];
                 readIndex += readLength;
             } else {
                 fieldRowModel.requirementsSatisfied = NO;
             }
-        }
+        }*/
     }
 }
 
@@ -161,7 +161,7 @@
     if (!self.canWrite) {
         if (error != nil) {
             *error = [NSError errorWithDomain:@"Characteristic is not writable" code:-1 userInfo:nil];
-            [self postRegisterLogNotification:[SILLogDataModel prepareLogDescription:@"OTA writeToPeripheral: Characteristic is not writable " andPeripheral:peripheral andError:*error]];
+            //[self postRegisterLogNotification:[SILLogDataModel prepareLogDescription:@"OTA writeToPeripheral: Characteristic is not writable " andPeripheral:peripheral andError:*error]];
         }
         return NO;
     }
@@ -173,14 +173,14 @@
     if (!dataToWrite) {
         if (error != nil) {
             *error = [NSError errorWithDomain:@"Data is out of range" code:-1 userInfo:nil];
-            [self postRegisterLogNotification:[SILLogDataModel prepareLogDescription:@"OTA writeToPeripheral: Data is out of range " andPeripheral:peripheral andError:*error]];
+            //[self postRegisterLogNotification:[SILLogDataModel prepareLogDescription:@"OTA writeToPeripheral: Data is out of range " andPeripheral:peripheral andError:*error]];
         }
         return NO;
     }
     
-    writeType = [self checkIfCharacteristicSupportsChosenWriteType:writeType];
+    //writeType = [self checkIfCharacteristicSupportsChosenWriteType:writeType];
     [peripheral writeValue:dataToWrite forCharacteristic:self.characteristic type:writeType];
-    [self postRegisterLogNotification: [SILLogDataModel prepareLogDescriptionForWriteValueOfCharacteristic:self.characteristic andPeripheral:peripheral andError:*error andData:dataToWrite]];
+    //[self postRegisterLogNotification: [SILLogDataModel prepareLogDescriptionForWriteValueOfCharacteristic:self.characteristic andPeripheral:peripheral andError:*error andData:dataToWrite]];
         
     return YES;
 }
@@ -230,7 +230,7 @@
 - (NSData *)parseModelDataWithError:(NSError * __autoreleasing *)error {
     NSMutableData * const data = [NSMutableData new];
     
-    for (NSObject<SILCharacteristicFieldRow> *fieldModel in self.fieldTableRowModels) {
+    /*for (NSObject<SILCharacteristicFieldRow> *fieldModel in self.fieldTableRowModels) {
         if (![self isFieldMetRequirement:fieldModel]) { continue; }
 
         NSData * const fieldData = [fieldModel dataForFieldWithError:error];
@@ -241,18 +241,18 @@
             
         [data appendData:fieldData];
     }
-    
+    */
     return [NSData dataWithData:data];
 }
 
-- (BOOL)isFieldMetRequirement:(NSObject<SILCharacteristicFieldRow> *)fieldModel {
+/*- (BOOL)isFieldMetRequirement:(NSObject<SILCharacteristicFieldRow> *)fieldModel {
     NSArray * const fieldRequirements = fieldModel.fieldModel.requirements;
     NSArray *nonMetRequirements = [fieldRequirements filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSObject *requirement, NSDictionary *bindings) {
         return ![self.requirementsMet containsObject:requirement];
     }]];
     
     return fieldRequirements && nonMetRequirements.count == 0;
-}
+}*/
 
 - (void)postRegisterLogNotification:(NSString*)description {
     [[NSNotificationCenter defaultCenter] postNotificationName:SILNotificationRegisterLog object:self userInfo:@{ @"description" : description}];
@@ -262,9 +262,9 @@
     if (self.isUnknown) {
         return NO;
     }
-    for (id<SILCharacteristicFieldRow> fieldRow in self.fieldTableRowModels) {        
+    /*for (id<SILCharacteristicFieldRow> fieldRow in self.fieldTableRowModels) {
         [fieldRow clearValues];
-    }
+    }*/
     self.requirementsMet = [[NSMutableArray alloc] initWithArray:@[@"Mandatory"]];
     return YES;
 }

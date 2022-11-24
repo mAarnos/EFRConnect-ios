@@ -12,8 +12,8 @@
 #import "SILUUIDProvider.h"
 #import "SILCharacteristicTableModel.h"
 #import "NSError+SILHelpers.h"
-#import <SVProgressHUD/SVProgressHUD.h>
 #import "SILOTAFirmwareFile.h"
+#import "NSString+SILBrowserNotifications.h"
 #if ENABLE_HOMEKIT
 #import "SILHomeKitManager.h"
 #endif
@@ -71,7 +71,7 @@ typedef NS_ENUM(NSInteger, SILOTAControlWriteMode) {
     return self;
 }
 
-- (instancetype)initWithAccessory:(HMAccessory *)accessory peripheral:(CBPeripheral *)peripheral centralManager:(SILCentralManager *)centralManager {
+- (instancetype)initWithAccessory:(HMAccessory *)accessory peripheral:(CBPeripheral *)peripheral centralManager:(CBCentralManager *)centralManager {
     _accessory = accessory;
     return [self initWithPeripheral:peripheral centralManager:centralManager];
 }

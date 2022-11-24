@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SILGenericAttributeTableModel.h"
-#import "SILCharacteristicFieldRow.h"
-#import "SILFieldRequirementEnforcer.h"
+//#import "SILGenericAttributeTableModel.h"
+//#import "SILCharacteristicFieldRow.h"
+//#import "SILFieldRequirementEnforcer.h"
 
-@class CBCharacteristic, CBPeripheral, SILBluetoothCharacteristicModel, SILCharacteristicFieldBuilder;
+@class CBCharacteristic, CBPeripheral/*, SILBluetoothCharacteristicModel, SILCharacteristicFieldBuilder*/;
 
 
-@interface SILCharacteristicTableModel : NSObject <SILGenericAttributeTableModel, SILFieldRequirementEnforcer >
+@interface SILCharacteristicTableModel : NSObject /*<SILGenericAttributeTableModel, SILFieldRequirementEnforcer >*/
 
 @property (strong, nonatomic) CBCharacteristic *characteristic;
-@property (strong, nonatomic) SILBluetoothCharacteristicModel *bluetoothModel;
+//@property (strong, nonatomic) SILBluetoothCharacteristicModel *bluetoothModel;
 @property (strong, nonatomic) NSArray *fieldTableRowModels;
 @property (strong, nonatomic) NSArray *descriptorModels;
 @property (nonatomic, readonly) BOOL canWrite;
@@ -28,7 +28,7 @@
 - (NSString *)name;
 - (void)updateRead:(CBCharacteristic *)characteristic;
 - (void)setIfAllowedFullWriteValue:(NSData *)value;
-- (void)updateWithField:(id<SILCharacteristicFieldRow>)fieldModel;
+//- (void)updateWithField:(id<SILCharacteristicFieldRow>)fieldModel;
 ///@discussion won't write to peripheral if this model cannot write
 - (BOOL)writeIfAllowedToPeripheral:(CBPeripheral *)peripheral withWriteType:(CBCharacteristicWriteType)writeType error:(NSError**)error;
 - (NSData *)getDataToWritingToLocalCharacteristicWithError:(NSError**)error;

@@ -9,6 +9,8 @@
 #ifndef SILConnectedPeripheralDataModel_h
 #define SILConnectedPeripheralDataModel_h
 
+#import <CoreBluetooth/CoreBluetooth.h>
+
 @interface SILConnectedPeripheralDataModel : NSObject
 
 @property (nonatomic, strong, readwrite) CBPeripheral* peripheral;

@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import RxCocoa
-import RxSwift
+//import RxCocoa
+//import RxSwift
 
 struct SILRSSIMeasurement {
     let rssi: NSNumber
@@ -18,31 +18,30 @@ struct SILRSSIMeasurement {
 @objcMembers
 class SILRSSIMeasurementTable: NSObject {
     
-    let rssiMeasurements = BehaviorRelay<[SILRSSIMeasurement]>(value: [])
+    //let rssiMeasurements = BehaviorRelay<[SILRSSIMeasurement]>(value: [])
+    var rssiMeasurements: [SILRSSIMeasurement] = []
     
-    lazy var lastMeasurement: Observable<SILRSSIMeasurement> = rssiMeasurements.asObservable()
-        .filter { !$0.isEmpty }
-        .map { $0.last! }
+    lazy var lastMeasurement: SILRSSIMeasurement? = rssiMeasurements.last
     
     func addRSSIMeasurement(_ RSSI: NSNumber) {
         if -100...18 ~= RSSI.intValue {
-            rssiMeasurements.addElement(element: SILRSSIMeasurement(rssi: RSSI, date: Date()))
+            rssiMeasurements.append(SILRSSIMeasurement(rssi: RSSI, date: Date()))
         }
     }
 
     func lastRSSIMeasurement() -> NSNumber? {
-        return rssiMeasurements.value.last?.rssi
+        return rssiMeasurements.last?.rssi
     }
 
     func hasRSSIMeasurement(inPastTimeInterval timeInterval: TimeInterval) -> Bool {
-        guard let lastRSSIMeasurementDate = rssiMeasurements.value.last?.date else {
+        guard let lastRSSIMeasurementDate = rssiMeasurements.last?.date else {
             return false
         }
         return Date().timeIntervalSince(lastRSSIMeasurementDate) < timeInterval
     }
 
     func averageRSSIMeasurement(inPastTimeInterval timeInterval: TimeInterval) -> NSNumber {
-        let filtered = rssiMeasurements.value.filter { Date().timeIntervalSince($0.date) < timeInterval }
+        let filtered = rssiMeasurements.filter { Date().timeIntervalSince($0.date) < timeInterval }
         
         if filtered.count > 0 {
             let rssiSum = filtered.reduce(0) { $0 + $1.rssi.intValue }
