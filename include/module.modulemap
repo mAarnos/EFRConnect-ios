@@ -1,0 +1,4 @@
+module EFRSDK {
+ header "EFRSDK/EFRSDK.h"
+ export *
+}
