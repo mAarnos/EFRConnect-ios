@@ -11,9 +11,9 @@
 //#import "SILBluetoothFieldModel.h"
 //#import "SILCharacteristicFieldBuilder.h"
 //#import "SILBluetoothModelManager.h"
-#import "SILUUIDProvider.h"
+#import "../../Models/SILUUIDProvider.h"
 //#import "SILLogDataModel.h"
-#import "BlueGecko.pch"
+#import "../../SupportingFiles/BlueGecko/BlueGecko.pch"
 //#import "SILEncodingPseudoFieldRowModel.h"
 
 //#import <Crashlytics/Crashlytics.h>

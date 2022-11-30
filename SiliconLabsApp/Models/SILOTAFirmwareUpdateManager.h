@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SILCentralManager.h"
+#import "../BluetoothControllers/SILCentralManager.h"
 
 #import <CoreBluetooth/CoreBluetooth.h>
 

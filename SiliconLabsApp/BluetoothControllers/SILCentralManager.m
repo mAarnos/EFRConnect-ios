@@ -10,12 +10,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SILCentralManager.h"
 //#import "SILBrowserConnectionsViewModel.h"
-#import "NSError+SILHelpers.h"
-#import "SILWeakTargetWrapper.h"
+#import "../Categories/NSError+SILHelpers.h"
+#import "../Helpers/SILWeakTargetWrapper.h"
 //#import "SILLogDataModel.h"
-#import "SILWeakNotificationPair.h"
+#import "../Models/SILWeakNotificationPair.h"
 #import "SILConstants.h"
-#import "NSString+SILBrowserNotifications.h"
+#import "../Categories/NSString+SILBrowserNotifications.h"
 #if ENABLE_HOMEKIT
 #import <HomeKit/HomeKit.h>
 #endif
@@ -189,7 +189,6 @@ NSTimeInterval const SILCentralManagerConnectionTimeoutThreshold = 20.0;
                                                                       repeats:NO];
         if (self.connectingPeripheral == nil) {
             [self stopScanning];
-            peripheral.delegate = self;
             self.connectingPeripheral = peripheral;
             if (self.connectingPeripheral.state == CBPeripheralStateConnected) {
                 [self centralManager:self.centralManager didConnectPeripheral:self.connectingPeripheral];

@@ -37,9 +37,7 @@ let package = Package(
 		"BluetoothControllers/SILConstants.m",
 		"Categories/CBPeripheral+Services.m",
 		"Categories/CBService+Categories.m",
-		"Models/SILBeacon.m",
 		"Categories/NSDictionary+SILErrorCode.m",
-		"BluetoothControllers/SILBluetoothSearch.m",
 		"BluetoothControllers/SILCentralManager.m",
 		"Helpers/SILCharacteristicFieldValueResolver.m",
 		"Models/SILOTAFirmwareUpdateManager.m",
@@ -47,7 +45,8 @@ let package = Package(
 		"Categories/NSString+SILBrowserNotifications.m",
 		"Models/SILOTAFirmwareFile.m",
 		"Models/SILWeakNotificationPair.m"
-	    ]
+	    ],
+	    publicHeadersPath: "SiliconLabsApp"
         )
     ]
 )

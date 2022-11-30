@@ -7,7 +7,7 @@
 //
 
 #import "CBPeripheral+Services.h"
-#import "SILUUIDProvider.h"
+#import "../Models/SILUUIDProvider.h"
 #import "CBService+Categories.h"
 
 @implementation CBPeripheral (Services)

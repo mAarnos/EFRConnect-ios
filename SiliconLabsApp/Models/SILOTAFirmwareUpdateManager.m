@@ -7,13 +7,13 @@
 //
 
 #import "SILOTAFirmwareUpdateManager.h"
-#import "CBPeripheral+Services.h"
-#import "CBService+Categories.h"
+#import "../Categories/CBPeripheral+Services.h"
+#import "../Categories/CBService+Categories.h"
 #import "SILUUIDProvider.h"
-#import "SILCharacteristicTableModel.h"
-#import "NSError+SILHelpers.h"
+#import "../Models/AttributeTableModels/SILCharacteristicTableModel.h"
+#import "../Categories/NSError+SILHelpers.h"
 #import "SILOTAFirmwareFile.h"
-#import "NSString+SILBrowserNotifications.h"
+#import "../Categories/NSString+SILBrowserNotifications.h"
 #if ENABLE_HOMEKIT
 #import "SILHomeKitManager.h"
 #endif

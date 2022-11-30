@@ -7,7 +7,7 @@
 //
 
 #import "SILCharacteristicFieldValueResolver.h"
-#import "SILBluetoothFieldModel.h"
+#import "../Models/BluetoothModels/SILBluetoothFieldModel.h"
 //#import <Crashlytics/Crashlytics.h>
 #import "SILCharacteristicFieldValueResolverContext.h"
 
