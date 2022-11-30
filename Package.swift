@@ -46,7 +46,7 @@ let package = Package(
 		"Models/SILOTAFirmwareFile.m",
 		"Models/SILWeakNotificationPair.m"
 	    ],
-	    publicHeadersPath: "SiliconLabsApp"
+	    publicHeadersPath: "EFRSDK"
         )
     ]
 )

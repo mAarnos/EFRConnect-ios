@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "../SiliconLabsApp/Models/SILOTAFirmwareUpdateManager.h"
+#import "../SiliconLabsApp/Models/SILOTAFirmwareFile.h"
+#import "../SiliconLabsApp/BluetoothControllers/SILCentralManager.h"
 
 @interface EFRSDK : NSObject
 
