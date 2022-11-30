@@ -850,7 +850,6 @@
 		330E5F25292EABA600FC401D /* SILCharacteristicTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8A8861BC47790001948C1 /* SILCharacteristicTableModel.m */; };
 		330E5F27292EABEB00FC401D /* SILBluetoothFieldModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BBA7641BD68AB300C2B07E /* SILBluetoothFieldModel.m */; };
 		330E5F28292EAC7900FC401D /* SILBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CCCFE91A73040C0004B2F4 /* SILBeacon.m */; };
-		330E5F2A292EAE6F00FC401D /* SILRSSIMeasurementTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80280F0A27D8BC24008D6F60 /* SILRSSIMeasurementTable.swift */; };
 		330E5F2C292EAF9600FC401D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E5F2B292EAF9600FC401D /* CoreLocation.framework */; };
 		330E5F2E292EAF9F00FC401D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E5F2D292EAF9E00FC401D /* CoreBluetooth.framework */; };
 		330E5F2F292EB15E00FC401D /* NSString+SILBrowserNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E56E9E42416800B00D5B92A /* NSString+SILBrowserNotifications.m */; };
@@ -859,6 +858,7 @@
 		330E5F36292F6EEE00FC401D /* SILWeakTargetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E642661F1A855DA8006C6B2F /* SILWeakTargetWrapper.m */; };
 		330E5F37292F6EFF00FC401D /* SILWeakNotificationPair.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C667231B0A5BD90083C248 /* SILWeakNotificationPair.m */; };
 		330E5F39292F6F1700FC401D /* SILCharacteristicFieldValueResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702AB2B1BDFEE35009527B0 /* SILCharacteristicFieldValueResolver.m */; };
+		330E5F3D2930C94400FC401D /* NSDictionary+SILErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F93AA1E757FB10057C1E0 /* NSDictionary+SILErrorCode.m */; };
 		491ADCBB1E71EEA300AC2E69 /* SILOTAUICoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 491ADCBA1E71EEA300AC2E69 /* SILOTAUICoordinator.m */; };
 		491ADCBF1E72E58300AC2E69 /* SILOTASetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491ADCBD1E72E58300AC2E69 /* SILOTASetupViewController.m */; };
 		491ADCC01E72E58300AC2E69 /* SILOTASetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491ADCBE1E72E58300AC2E69 /* SILOTASetupViewController.xib */; };
@@ -6257,7 +6257,7 @@
 				330E5F1B292EA9C600FC401D /* CBPeripheral+Services.m in Sources */,
 				330E5F1C292EA9CB00FC401D /* CBService+Categories.m in Sources */,
 				330E5F28292EAC7900FC401D /* SILBeacon.m in Sources */,
-				330E5F2A292EAE6F00FC401D /* SILRSSIMeasurementTable.swift in Sources */,
+				330E5F3D2930C94400FC401D /* NSDictionary+SILErrorCode.m in Sources */,
 				330E5F1F292EA9E900FC401D /* SILBluetoothSearch.m in Sources */,
 				330E5F31292F316E00FC401D /* SILCentralManager.m in Sources */,
 				330E5F39292F6F1700FC401D /* SILCharacteristicFieldValueResolver.m in Sources */,
@@ -6657,7 +6657,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = UR999LKQLA;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -6683,7 +6683,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UR999LKQLA;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

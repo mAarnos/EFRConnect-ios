@@ -76,7 +76,7 @@
 }
 
 - (BOOL)isUnknown {
-    return false; //self.bluetoothModel == nil && self.fieldTableRowModels.count == 0;
+    return true; //self.bluetoothModel == nil && self.fieldTableRowModels.count == 0;
 }
 
 #pragma mark - SILGenericAttributeTableModel

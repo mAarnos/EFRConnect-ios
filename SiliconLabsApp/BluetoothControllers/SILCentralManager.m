@@ -189,7 +189,7 @@ NSTimeInterval const SILCentralManagerConnectionTimeoutThreshold = 20.0;
                                                                       repeats:NO];
         if (self.connectingPeripheral == nil) {
             [self stopScanning];
-
+            peripheral.delegate = self;
             self.connectingPeripheral = peripheral;
             if (self.connectingPeripheral.state == CBPeripheralStateConnected) {
                 [self centralManager:self.centralManager didConnectPeripheral:self.connectingPeripheral];
