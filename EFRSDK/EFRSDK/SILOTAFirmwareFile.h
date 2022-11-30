@@ -1,0 +1,1 @@
+../../SiliconLabsApp/Models/SILOTAFirmwareFile.h
