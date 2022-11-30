@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@class SILDiscoveredPeripheral;
+//@class SILDiscoveredPeripheral;
 @class CBUUID;
 
 extern NSString * _Nonnull const SILCentralManagerDidConnectPeripheralNotification;
