@@ -10,6 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "EFRSDK",
+            type: .static,
             targets: ["EFRSDK"])
     ],
     targets: [
@@ -45,8 +46,7 @@ let package = Package(
 		"Categories/NSString+SILBrowserNotifications.m",
 		"Models/SILOTAFirmwareFile.m",
 		"Models/SILWeakNotificationPair.m"
-	    ],
-	    publicHeadersPath: "EFRSDK"
+	    ]
         )
     ]
 )
