@@ -146,7 +146,7 @@ typedef NS_ENUM(NSInteger, SILOTAControlWriteMode) {
 }
 
 - (void)reconnectToOTADevice {
-    SILDiscoveredPeripheral* discoveredPeripheral = [self.centralManager discoveredPeripheralForPeripheral:self.peripheral];
+    CBPeripheral* discoveredPeripheral = [self.centralManager discoveredPeripheralForPeripheral:self.peripheral];
     [self.centralManager connectToDiscoveredPeripheral:discoveredPeripheral];
 }
 
